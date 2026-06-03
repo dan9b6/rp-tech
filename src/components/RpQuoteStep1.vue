@@ -15,12 +15,21 @@
           type="text"
           placeholder="John Carter"
           autocomplete="name"
-          :class="['rp-input__text', { 'rp-input__text--error': showError('name') }]"
+          required
+          :class="[
+            'rp-input__text',
+            { 'rp-input__text--error': showError('name') },
+          ]"
           :aria-invalid="showError('name')"
           :aria-describedby="showError('name') ? 'name-error' : undefined"
           @blur="touch('name')"
         />
-        <span v-if="showError('name')" id="name-error" class="rp-form__error" role="alert">
+        <span
+          v-if="showError('name')"
+          id="name-error"
+          class="rp-form__error"
+          role="alert"
+        >
           Please enter a valid name
         </span>
       </div>
@@ -34,12 +43,21 @@
           type="email"
           placeholder="Email address"
           autocomplete="email"
-          :class="['rp-input__text', { 'rp-input__text--error': showError('email') }]"
+          required
+          :class="[
+            'rp-input__text',
+            { 'rp-input__text--error': showError('email') },
+          ]"
           :aria-invalid="showError('email')"
           :aria-describedby="showError('email') ? 'email-error' : undefined"
           @blur="touch('email')"
         />
-        <span v-if="showError('email')" id="email-error" class="rp-form__error" role="alert">
+        <span
+          v-if="showError('email')"
+          id="email-error"
+          class="rp-form__error"
+          role="alert"
+        >
           Please enter a valid email address
         </span>
       </div>
@@ -51,12 +69,20 @@
           type="tel"
           placeholder="07712345678"
           autocomplete="tel"
-          :class="['rp-input__text', { 'rp-input__text--error': showError('phone') }]"
+          :class="[
+            'rp-input__text',
+            { 'rp-input__text--error': showError('phone') },
+          ]"
           :aria-invalid="showError('phone')"
           :aria-describedby="showError('phone') ? 'phone-error' : undefined"
           @blur="touch('phone')"
         />
-        <span v-if="showError('phone')" id="phone-error" class="rp-form__error" role="alert">
+        <span
+          v-if="showError('phone')"
+          id="phone-error"
+          class="rp-form__error"
+          role="alert"
+        >
           Please enter a valid phone number
         </span>
       </div>
