@@ -38,7 +38,10 @@
         />
       </Transition>
     </RpCard>
-    <footer v-if="submitted" class="rp-quote__footer rp-quote__footer--success">
+    <footer
+      v-if="submitted"
+      class="rp-quote__footer rp-quote__footer--success rp-anim rp-anim--fade-zoom-in"
+    >
       <RpButton @click="reset">Submit new quote</RpButton>
     </footer>
     <footer v-if="!submitted" class="rp-quote__footer">
