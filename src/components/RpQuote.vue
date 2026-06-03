@@ -56,7 +56,7 @@
 
 <script setup lang="ts">
 import { ref, reactive, computed, onMounted } from "vue";
-import { isValidName, isValidEmail } from "../utils/validators";
+import { isValidName, isValidEmail, isValidPhone } from "../utils/validators";
 import type { QuoteFormData } from "../types/quote";
 import RpButton from "./RpButton.vue";
 import RpCard from "./RpCard.vue";
@@ -77,7 +77,7 @@ const formData = reactive<QuoteFormData>({
 });
 
 const isStep1Valid = computed(
-  () => isValidName(formData.name) && isValidEmail(formData.email),
+  () => isValidName(formData.name) && isValidEmail(formData.email) && isValidPhone(formData.phone),
 );
 
 onMounted(() => {
