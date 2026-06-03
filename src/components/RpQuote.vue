@@ -38,6 +38,9 @@
         />
       </Transition>
     </RpCard>
+    <footer v-if="submitted" class="rp-quote__footer rp-quote__footer--success">
+      <RpButton @click="reset">Submit new quote</RpButton>
+    </footer>
     <footer v-if="!submitted" class="rp-quote__footer">
       <RpButton
         variant="outline-primary"
@@ -77,7 +80,10 @@ const formData = reactive<QuoteFormData>({
 });
 
 const isStep1Valid = computed(
-  () => isValidName(formData.name) && isValidEmail(formData.email) && isValidPhone(formData.phone),
+  () =>
+    isValidName(formData.name) &&
+    isValidEmail(formData.email) &&
+    isValidPhone(formData.phone),
 );
 
 onMounted(() => {
@@ -92,6 +98,16 @@ function prevStep() {
   step.value--;
 }
 
+function reset() {
+  formData.name = "";
+  formData.email = "";
+  formData.phone = "";
+  formData.company = "";
+  confirmed.value = false;
+  submitted.value = false;
+  step.value = 1;
+}
+
 function handleSubmit() {
   if (step.value === 1) {
     if (isStep1Valid.value) nextStep();
@@ -99,7 +115,5 @@ function handleSubmit() {
   }
   if (!confirmed.value) return;
   submitted.value = true;
-
-  console.log("Form Submission Complete");
 }
 </script>
