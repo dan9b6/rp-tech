@@ -1,0 +1,87 @@
+.rp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding-block: 0.625rem;
+  padding-inline: 1.5rem;
+  border-radius: 9999px;
+  border: 1px solid transparent;
+  font-family: var(--rp-font);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.rp-btn--sm {
+  padding-block: 0.375rem;
+  padding-inline: 1rem;
+  font-size: 0.875rem;
+}
+
+.rp-btn--primary {
+  background-color: var(--rp-primary);
+  color: var(--rp-white);
+  box-shadow: var(--rp-shadow-md);
+}
+
+.rp-btn--primary:hover:not(:disabled):not([aria-disabled="true"]) {
+  background-color: var(--rp-primary-dark);
+  box-shadow: var(--rp-shadow-lg);
+  transform: scale(1.02);
+}
+
+.rp-btn--primary:focus-visible {
+  box-shadow: var(--rp-shadow-md), var(--rp-shadow-focus);
+}
+
+.rp-btn--outline-primary {
+  background-color: transparent;
+  color: var(--rp-primary);
+  border-color: var(--rp-primary);
+  font-weight: 400;
+}
+
+.rp-btn--outline-primary:hover:not(:disabled):not([aria-disabled="true"]) {
+  background-color: rgba(236, 113, 37, 0.06);
+  color: var(--rp-primary-dark);
+  border-color: var(--rp-primary-dark);
+}
+
+.rp-btn:disabled,
+.rp-btn[aria-disabled="true"] {
+  opacity: 0.35;
+  cursor: not-allowed;
+  pointer-events: auto;
+  transform: none;
+  box-shadow: none;
+}
+
+.rp-btn--loading {
+  cursor: wait;
+}
+
+.rp-btn__spinner {
+  display: inline-block;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 9999px;
+  animation: rp-spin 0.6s linear infinite;
+}
+
+.rp-btn__label--hidden {
+  visibility: hidden;
+  position: absolute;
+}

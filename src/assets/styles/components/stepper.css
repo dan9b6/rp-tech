@@ -1,0 +1,51 @@
+/* Stepper */
+.rp-stepper {
+  border-bottom: 1px solid var(--rp-grey-light);
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.rp-stepper__steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2rem;
+}
+
+.rp-stepper__step {
+  border-radius: 9999px;
+  height: 2rem;
+  width: 2rem;
+  background-color: var(--rp-grey-light);
+  color: var(--rp-tertiary-dark);
+  font-weight: 500;
+  outline: none;
+  border: none;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.rp-stepper__step:hover {
+  background-color: var(--rp-tertiary);
+  color: var(--rp-white);
+}
+
+.rp-stepper__step.active {
+  background-color: var(--rp-primary);
+  color: var(--rp-white);
+}
+
+.rp-stepper__step.active:hover {
+  background-color: var(--rp-primary-dark);
+}
+
+@media (min-width: 767px) {
+  .rp-stepper {
+    margin-block-end: 3rem;
+  }
+
+  .rp-stepper__steps {
+    column-gap: 6rem;
+  }
+}

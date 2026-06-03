@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..900;1,9..40,100..900&display=swap");
+
+:root {
+  --rp-font: "DM Sans", sans-serif;
+
+  --rp-primary: #ec7125;
+  --rp-primary-light: #f08949;
+  --rp-primary-dark: #d4641c;
+
+  --rp-secondary: #291040;
+  --rp-secondary-light: #3c1863;
+  --rp-secondary-dark: #1f0c30;
+
+  --rp-tertiary: #afafaf;
+  --rp-tertiary-light: #c5c5c5;
+  --rp-tertiary-dark: #757575;
+
+  --rp-white: #ffffff;
+  --rp-black: #000000;
+  --rp-grey-light: #ededed;
+
+  --rp-error: #dc2626;
+  --rp-error-light: #fef2f2;
+
+  --rp-shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.08);
+  --rp-shadow-md: 0 2px 8px rgba(0, 0, 0, 0.12);
+  --rp-shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.16);
+  --rp-shadow-focus: 0 0 0 4px rgba(236, 113, 37, 0.2);
+}

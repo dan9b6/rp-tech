@@ -1,0 +1,53 @@
+/* Footer */
+.rp-footer {
+  padding-block: 1.5rem;
+  border-top: 1px solid var(--rp-grey-light);
+}
+
+.rp-footer__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.rp-footer__copyright {
+  display: block;
+  margin-block-start: 0.5rem;
+}
+
+.rp-footer__subscribe {
+  position: relative;
+  width: fit-content;
+}
+
+.rp-footer__subscribe > .rp-input__text {
+  border-radius: 9999px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 1.5rem;
+  min-width: 320px;
+  padding-inline-end: 8rem;
+}
+
+.rp-footer__subscribe > .rp-btn {
+  position: absolute;
+  top: 50%;
+  right: 0.5rem;
+  transform: translateY(-50%);
+  will-change: transform;
+}
+
+.rp-footer__subscribe
+  > .rp-btn:hover:not(:disabled):not([aria-disabled="true"]) {
+  transform: translateY(-50%) scale(1.02);
+}
+
+@media (min-width: 480px) {
+  .rp-footer {
+    padding-block: 2.5rem;
+  }
+}

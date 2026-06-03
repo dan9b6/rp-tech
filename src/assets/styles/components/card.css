@@ -1,0 +1,8 @@
+/* Cards */
+.rp-card {
+  overflow: hidden;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid var(--rp-grey-light);
+  box-shadow: var(--rp-shadow-sm);
+}

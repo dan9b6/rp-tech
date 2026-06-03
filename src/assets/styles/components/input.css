@@ -1,0 +1,41 @@
+/* Input */
+.rp-input__text {
+  border-radius: 0;
+  border: 1px solid var(--rp-grey-light);
+  box-shadow: var(--rp-shadow-sm);
+  padding: 1rem 0.75rem;
+  color: var(--rp-secondary);
+  font-size: 1rem;
+}
+
+.rp-input__text::placeholder {
+  color: var(--rp-tertiary-light);
+}
+
+.rp-input__text--error {
+  border-color: var(--rp-error);
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.12);
+}
+
+.rp-input__text:focus-visible {
+  box-shadow: var(--rp-shadow-sm), var(--rp-shadow-focus);
+  border-color: var(--rp-primary);
+}
+
+.rp-input__checkbox {
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--rp-primary);
+  cursor: pointer;
+}
+
+.rp-input__confirm {
+  grid-column: span 2;
+}
+
+.rp-input__confirm > .rp-form__label {
+  margin-inline-start: 0.5rem;
+  cursor: pointer;
+}

@@ -1,0 +1,33 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: none;
+  outline-offset: 3px;
+  box-shadow: var(--rp-shadow-focus);
+}
+
+html {
+  font-size: 14px;
+  font-family: var(--rp-font);
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+}
+
+@media (min-width: 767px) {
+  html {
+    font-size: 16px;
+  }
+}

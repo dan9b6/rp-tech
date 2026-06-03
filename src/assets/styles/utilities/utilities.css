@@ -1,0 +1,8 @@
+/* Utilities */
+.rp-invisible {
+  visibility: hidden;
+}
+
+.rp-hidden {
+  display: none;
+}

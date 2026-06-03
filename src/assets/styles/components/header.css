@@ -1,0 +1,17 @@
+/* Header */
+.rp-header {
+  padding-block: 1rem;
+}
+
+.rp-header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 1rem;
+}
+
+@media (min-width: 480px) {
+  .rp-header {
+    padding-block: 2.5rem;
+  }
+}

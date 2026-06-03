@@ -1,0 +1,37 @@
+/* Form */
+.rp-form__control {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.25rem;
+}
+
+.rp-form__label {
+  color: var(--rp-secondary);
+  font-weight: 500;
+}
+
+.rp-form__asterisk {
+  color: var(--rp-primary);
+}
+
+.rp-form__error {
+  font-size: 0.8125rem;
+  color: var(--rp-error);
+  margin-top: 0.125rem;
+}
+
+.rp-form__row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.rp-form__value {
+  color: var(--rp-tertiary-dark);
+}
+
+@media (min-width: 767px) {
+  .rp-form__row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
